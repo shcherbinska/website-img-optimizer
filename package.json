@@ -1,0 +1,17 @@
+{
+    "name": "website-img-optimizer",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "mozjpeg": "squoosh-cli --mozjpeg auto -d output-files ./source-files/*",
+        "oxipng": "squoosh-cli --oxipng auto -d output-files ./source-files/*",
+        "rename": "node scripts/renameOutputFiles.js",
+        "copy-names": "node scripts/outputFileNames.js",
+        "resize": "squoosh-cli --resize '{\"enabled\":true,\"height\":690}' -d output-files ./source-files/*"
+    },
+    "author": "Elianta",
+    "license": "ISC",
+    "dependencies": {
+        "@squoosh/cli": "^0.7.3"
+    }
+}
